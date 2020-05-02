@@ -1,0 +1,9 @@
+puts "#HD: Running synthesis for block left_slow"
+create_project -in_memory -part xczu2eg-sfva625-1-e > ./Synth/left_slow/create_project.log
+set_property source_mgmt_mode All [current_project]
+add_files ./Sources/hdl/left_slow/left_slow.v
+synth_design -mode out_of_context -flatten_hierarchy rebuilt -top shift_l -part xczu2eg-sfva625-1-e > ./Synth/left_slow/shift_l_synth_design.rds
+write_checkpoint -force ./Synth/left_slow/shift_l_synth.dcp > ./Synth/left_slow/write_checkpoint.log
+report_utilization -file ./Synth/left_slow/shift_l_utilization_synth.rpt > ./Synth/left_slow/temp.log
+close_project
+puts "#HD: Synthesis of module left_slow complete\n"

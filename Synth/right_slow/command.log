@@ -1,0 +1,9 @@
+puts "#HD: Running synthesis for block right_slow"
+create_project -in_memory -part xczu2eg-sfva625-1-e > ./Synth/right_slow/create_project.log
+set_property source_mgmt_mode All [current_project]
+add_files ./Sources/hdl/right_slow/right_slow.v
+synth_design -mode out_of_context -flatten_hierarchy rebuilt -top shift_r -part xczu2eg-sfva625-1-e > ./Synth/right_slow/shift_r_synth_design.rds
+write_checkpoint -force ./Synth/right_slow/shift_r_synth.dcp > ./Synth/right_slow/write_checkpoint.log
+report_utilization -file ./Synth/right_slow/shift_r_utilization_synth.rpt > ./Synth/right_slow/temp.log
+close_project
+puts "#HD: Synthesis of module right_slow complete\n"

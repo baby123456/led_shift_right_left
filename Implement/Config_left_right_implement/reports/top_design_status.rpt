@@ -1,0 +1,115 @@
+Command: debug::report_design_status
+PR Design Status: 
+ 
+Static Logic: 
+------------------------------------------------------------
+   Number of Reconfigurable Modules...............: 2
+   Cells Info: 
+       Number of Leaf Cells.......................: 53
+   Nets Info: 
+       Number of Signal Nets......................: 77
+       Has VCC nets...............................: Yes
+       Has GND nets...............................: Yes
+   Clock Sites Info: 
+       MMCME3_ADV Usage...........................: 0% (0 of 0)
+       PLLE3_ADV Usage............................: 0% (0 of 0)
+       BUFGCE/BUFGCTRL Usage......................: 1.04166% (1 of 96)
+   IO Sites Info: 
+       IOBUF Usage................................: 0.07093% (9 of 12687)
+       GTHE3_CHANNEL/GTHE3_COMMON Usage...........: 0% (0 of 0)
+   Logic Sites Info: 
+       RAMB18E2 Usage.............................: 0% (0 of 364)
+       RAMB36E2 Usage.............................: 0% (0 of 182)
+       DSP48E2 Usage..............................: 0% (0 of 326)
+       SLICE Usage................................: 0.06377% (5 of 7840)
+           LUT Usage..............................: 0.00318% (2 of 62720)
+           FF Usage...............................: 0.02790% (35 of 125440)
+           Carry8 Usage...........................: 0.06377% (5 of 7840)
+   HD Inserted LUT1 Info:
+       Number of Inserted LUT1s...................: 0
+           Inserted for VCC.......................: 0
+           Inserted for GND.......................: 0
+           Inserted for S-IN Loadless.............: 0
+           Inserted for S-OUT Driverless..........: 0
+           Inserted for Common Driver.............: 0
+------------------------------------------------------------
+ 
+Reconfigurable Module: inst_shift_l
+------------------------------------------------------------
+   Cells Info: 
+       Number of Leaf Cells.......................: 2
+   Nets Info: 
+       Number of Signal Nets......................: 37
+       Has VCC nets...............................: Yes
+       Has GND nets...............................: Yes
+   Clock Sites Info: 
+       MMCME3_ADV Usage...........................: 0% (0 of 0)
+       PLLE3_ADV Usage............................: 0% (0 of 0)
+       BUFGCE/BUFGCTRL Usage......................: 0% (0 of 0)
+   IO Sites Info: 
+       IOBUF Usage................................: 0% (0 of 891)
+       GTHE3_CHANNEL/GTHE3_COMMON Usage...........: 0% (0 of 0)
+   Logic Sites Info: 
+       RAMB18E2 Usage.............................: 0% (0 of 36)
+       RAMB36E2 Usage.............................: 5.55555% (1 of 18)
+       DSP48E2 Usage..............................: 0% (0 of 18)
+       SLICE Usage................................: 0.18518% (1 of 540)
+           LUT Usage..............................: 0.02314% (1 of 4320)
+           FF Usage...............................: 0% (0 of 8640)
+           Carry8 Usage...........................: 0% (0 of 540)
+   PPLOCs Info:
+       Number of PPLOCs...........................: 18
+           Number of PPLOCs in INT Tile...........: 17
+           Number of PPLOCs in CLK Tile...........: 1
+       Number of INT Tiles with PPLOCs............: 12
+       Number of INT Tiles in PBLOCK..............: 360
+       Average Number of PPLOCs per INT Tile......: 1.41
+       Maximum Number of PPLOCs per INT Tile......: 3
+   HD Inserted LUT1 Info:
+       Number of Inserted LUT1s...................: 0
+           Inserted for VCC.......................: 0
+           Inserted for GND.......................: 0
+           Inserted for S-IN Loadless.............: 0
+           Inserted for S-OUT Driverless..........: 0
+           Inserted for Common Driver.............: 0
+------------------------------------------------------------
+ 
+Reconfigurable Module: inst_shift_r
+------------------------------------------------------------
+   Cells Info: 
+       Number of Leaf Cells.......................: 2
+   Nets Info: 
+       Number of Signal Nets......................: 37
+       Has VCC nets...............................: Yes
+       Has GND nets...............................: Yes
+   Clock Sites Info: 
+       MMCME3_ADV Usage...........................: 0% (0 of 0)
+       PLLE3_ADV Usage............................: 0% (0 of 0)
+       BUFGCE/BUFGCTRL Usage......................: 0% (0 of 0)
+   IO Sites Info: 
+       IOBUF Usage................................: 0% (0 of 751)
+       GTHE3_CHANNEL/GTHE3_COMMON Usage...........: 0% (0 of 0)
+   Logic Sites Info: 
+       RAMB18E2 Usage.............................: 0% (0 of 32)
+       RAMB36E2 Usage.............................: 6.25% (1 of 16)
+       DSP48E2 Usage..............................: 0% (0 of 16)
+       SLICE Usage................................: 0.22727% (1 of 440)
+           LUT Usage..............................: 0.02840% (1 of 3520)
+           FF Usage...............................: 0% (0 of 7040)
+           Carry8 Usage...........................: 0% (0 of 440)
+   PPLOCs Info:
+       Number of PPLOCs...........................: 14
+           Number of PPLOCs in INT Tile...........: 13
+           Number of PPLOCs in CLK Tile...........: 1
+       Number of INT Tiles with PPLOCs............: 12
+       Number of INT Tiles in PBLOCK..............: 280
+       Average Number of PPLOCs per INT Tile......: 1.08
+       Maximum Number of PPLOCs per INT Tile......: 2
+   HD Inserted LUT1 Info:
+       Number of Inserted LUT1s...................: 0
+           Inserted for VCC.......................: 0
+           Inserted for GND.......................: 0
+           Inserted for S-IN Loadless.............: 0
+           Inserted for S-OUT Driverless..........: 0
+           Inserted for Common Driver.............: 0
+------------------------------------------------------------

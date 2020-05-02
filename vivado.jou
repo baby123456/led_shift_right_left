@@ -1,0 +1,16 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Sat May  2 12:18:53 2020
+# Process ID: 20709
+# Current directory: /home/ict/led_shift_right_left
+# Command line: vivado -mode tcl
+# Log file: /home/ict/led_shift_right_left/vivado.log
+# Journal file: /home/ict/led_shift_right_left/vivado.jou
+#-----------------------------------------------------------
+ls
+source run_pr.tcl
+ls
+ls Bitstreams
+ls *.bit

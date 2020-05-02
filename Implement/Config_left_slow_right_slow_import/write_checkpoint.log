@@ -1,0 +1,7 @@
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3663.488 ; gain = 0.000 ; free physical = 396 ; free virtual = 5249
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00.21 ; elapsed = 00:00:00.22 . Memory (MB): peak = 3663.488 ; gain = 0.000 ; free physical = 393 ; free virtual = 5249
+INFO: [Common 17-1381] The checkpoint '/home/ict/led_shift_right_left/Implement/Config_left_slow_right_slow_import/inst_shift_r_right_slow_route_design.dcp' has been generated.

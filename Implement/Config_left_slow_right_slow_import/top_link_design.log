@@ -1,0 +1,26 @@
+Command: link_design -mode default -reconfig_partitions {inst_shift_l inst_shift_r} -part xczu2eg-sfva625-1-e -top top
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Project 1-454] Reading design checkpoint '/home/ict/led_shift_right_left/Synth/left_slow/shift_l_synth.dcp' for cell 'inst_shift_l'
+INFO: [Project 1-454] Reading design checkpoint '/home/ict/led_shift_right_left/Synth/right_slow/shift_r_synth.dcp' for cell 'inst_shift_r'
+INFO: [Netlist 29-17] Analyzing 7 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2018.3
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/home/ict/led_shift_right_left/Checkpoint/top_static/top.xdc]
+INFO: [Constraints 18-4422] SNAPPING_MODE is set so implementation will use the DERIVED_RANGES which may be different then the GRID_RANGES. [/home/ict/led_shift_right_left/Sources/xdc/top_interwiser.xdc:7]
+Finished Parsing XDC File [/home/ict/led_shift_right_left/Checkpoint/top_static/top.xdc]
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.05 . Memory (MB): peak = 3659.449 ; gain = 0.000 ; free physical = 357 ; free virtual = 5464
+Restored from archive | CPU: 0.040000 secs | Memory: 0.099998 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.05 . Memory (MB): peak = 3659.449 ; gain = 0.000 ; free physical = 357 ; free virtual = 5464
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3659.449 ; gain = 0.000 ; free physical = 357 ; free virtual = 5464
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 2 instances were transformed.
+  IBUF => IBUF (IBUFCTRL, INBUF): 2 instances
+
+108 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
+link_design completed successfully

@@ -1,0 +1,42 @@
+puts "#HD: Running implementation Config_left_right_implement"
+create_project -in_memory -part xczu2eg-sfva625-1-e > ./Implement/Config_left_right_implement/create_project.log
+add_files ./Synth/Static/top_synth.dcp
+add_files ./Sources/xdc/top_interwiser.xdc
+set_property USED_IN {implementation} [get_files ./Sources/xdc/top_interwiser.xdc]
+add_file ./Synth/left/shift_l_synth.dcp
+set_property SCOPED_TO_CELLS {inst_shift_l} [get_files ./Synth/left/shift_l_synth.dcp]
+add_file ./Synth/right/shift_r_synth.dcp
+set_property SCOPED_TO_CELLS {inst_shift_r} [get_files ./Synth/right/shift_r_synth.dcp]
+link_design -mode default -reconfig_partitions {inst_shift_l inst_shift_r} -part xczu2eg-sfva625-1-e -top top > ./Implement/Config_left_right_implement/top_link_design.log
+write_checkpoint -force ./Implement/Config_left_right_implement/top_link_design.dcp > ./Implement/Config_left_right_implement/write_checkpoint.log
+opt_design > ./Implement/Config_left_right_implement/top_opt_design.log
+puts "	#HD: Completed: opt_design"
+write_checkpoint -force ./Implement/Config_left_right_implement/top_opt_design.dcp > ./Implement/Config_left_right_implement/write_checkpoint.log
+place_design > ./Implement/Config_left_right_implement/top_place_design.log
+puts "	#HD: Completed: place_design"
+write_checkpoint -force ./Implement/Config_left_right_implement/top_place_design.dcp > ./Implement/Config_left_right_implement/write_checkpoint.log
+phys_opt_design > ./Implement/Config_left_right_implement/top_phys_opt_design.log
+puts "	#HD: Completed: phys_opt_design"
+write_checkpoint -force ./Implement/Config_left_right_implement/top_phys_opt_design.dcp > ./Implement/Config_left_right_implement/write_checkpoint.log
+route_design > ./Implement/Config_left_right_implement/top_route_design.log
+puts "	#HD: Completed: route_design"
+write_checkpoint -force ./Implement/Config_left_right_implement/top_route_design.dcp > ./Implement/Config_left_right_implement/write_checkpoint.log
+report_utilization -file ./Implement/Config_left_right_implement/reports/top_utilization_route_design.rpt > ./Implement/Config_left_right_implement/temp.log
+report_route_status -file ./Implement/Config_left_right_implement/reports/top_route_status.rpt > ./Implement/Config_left_right_implement/temp.log
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -file ./Implement/Config_left_right_implement/reports/top_timing_summary.rpt > ./Implement/Config_left_right_implement/temp.log
+debug::report_design_status > ./Implement/Config_left_right_implement/reports/top_design_status.rpt
+report_drc -ruledeck bitstream_checks -name top -file ./Implement/Config_left_right_implement/reports/top_drc_bitstream_checks.rpt > ./Implement/Config_left_right_implement/reports/temp.log
+file mkdir ./Checkpoint
+lock_design -level logical -cell inst_shift_l > ./Implement/Config_left_right_implement/lock_inst_shift_l.log
+write_checkpoint -force -cell inst_shift_l ./Implement/Config_left_right_implement/inst_shift_l_left_route_design.dcp > ./Implement/Config_left_right_implement/write_checkpoint.log
+file copy -force ./Implement/Config_left_right_implement/inst_shift_l_left_route_design.dcp ./Checkpoint
+update_design -cell inst_shift_l -black_box > ./Implement/Config_left_right_implement/carve_inst_shift_l.log
+lock_design -level logical -cell inst_shift_r > ./Implement/Config_left_right_implement/lock_inst_shift_r.log
+write_checkpoint -force -cell inst_shift_r ./Implement/Config_left_right_implement/inst_shift_r_right_route_design.dcp > ./Implement/Config_left_right_implement/write_checkpoint.log
+file copy -force ./Implement/Config_left_right_implement/inst_shift_r_right_route_design.dcp ./Checkpoint
+update_design -cell inst_shift_r -black_box > ./Implement/Config_left_right_implement/carve_inst_shift_r.log
+lock_design -level routing > ./Implement/Config_left_right_implement/lock_design_top.log
+write_checkpoint -force ./Implement/Config_left_right_implement/top_static.dcp > ./Implement/Config_left_right_implement/write_checkpoint.log
+file copy -force ./Implement/Config_left_right_implement/top_static.dcp ./Checkpoint
+puts "#HD: Implementation Config_left_right_implement complete\n"
+close_project

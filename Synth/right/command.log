@@ -1,0 +1,9 @@
+puts "#HD: Running synthesis for block right"
+create_project -in_memory -part xczu2eg-sfva625-1-e > ./Synth/right/create_project.log
+set_property source_mgmt_mode All [current_project]
+add_files ./Sources/hdl/right/right.v
+synth_design -mode out_of_context -flatten_hierarchy rebuilt -top shift_r -part xczu2eg-sfva625-1-e > ./Synth/right/shift_r_synth_design.rds
+write_checkpoint -force ./Synth/right/shift_r_synth.dcp > ./Synth/right/write_checkpoint.log
+report_utilization -file ./Synth/right/shift_r_utilization_synth.rpt > ./Synth/right/temp.log
+close_project
+puts "#HD: Synthesis of module right complete\n"
