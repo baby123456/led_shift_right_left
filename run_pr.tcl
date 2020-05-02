@@ -47,21 +47,21 @@ set top "top"
 ### 1. Define Reconfigurable Partition (RP) name
 ### 2. Associate Reconfigurable Modules (RMs) to the RP
 ###############################################################
-set rp1 "shift_left_rp"
-set rm_variants($rp1) "shift_left shift_left_slow"
-set rp2 "shift_right_rp"
-set rm_variants($rp2) "shift_right shift_right_slow"
+set rp1 "shift_l"
+set rm_variants($rp1) "left left_slow"
+set rp2 "shift_r"
+set rm_variants($rp2) "right right_slow"
 
 ########################################################################
 ### RM Configurations (Valid combinations of RM variants)
 ### 1. Define initial configuration: rm_config(initial)
 ### 2. Define additional configurations: rm_config(xyz)
 ########################################################################
-set module1_variant1 "shift_left"
-set module2_variant1 "shift_right"
+set module1_variant1 "left"
+set module2_variant1 "right"
 set rm_config(initial)   "$rp1 $module1_variant1 $rp2 $module2_variant1"
-set module1_variant2 "shift_left_slow"
-set module2_variant2 "shift_right_slow"
+set module1_variant2 "left_slow"
+set module2_variant2 "right_slow"
 set rm_config(reconfig1) "$rp1 $module1_variant2 $rp2 $module2_variant2"
 
 ########################################################################

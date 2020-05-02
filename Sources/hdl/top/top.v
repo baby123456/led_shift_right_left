@@ -8,7 +8,7 @@ module top(
    reg  [34:0] count;
    
    // instantiate module shift for low bits
-   shift_left inst_shift_left (
+   shift_l inst_shift_l (
       .en       (rst_n),
       .clk      (clk),
       .addr     (count[34:23]),
@@ -16,7 +16,7 @@ module top(
    );
  
    // instantiate module shift for high bits
-   shift_right inst_shift_right (
+   shift_r inst_shift_r (
       .en       (rst_n),
       .clk      (clk),
       .addr     (count[34:23]),
@@ -35,14 +35,14 @@ module top(
 
 endmodule
 // black box definition for module_shift
-module shift_left(
+module shift_l(
    input         en,
    input         clk,
    input  [11:0] addr,
    output  [3:0] data_out);
 endmodule
 
-module shift_right(
+module shift_r(
    input         en,
    input         clk,
    input  [11:0] addr,
