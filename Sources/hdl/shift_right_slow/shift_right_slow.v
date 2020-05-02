@@ -1,4 +1,4 @@
-module shift (
+module shift_right (
    en,
    clk,
    addr,
