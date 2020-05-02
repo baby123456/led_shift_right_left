@@ -47,9 +47,9 @@ set top "top"
 ### 1. Define Reconfigurable Partition (RP) name
 ### 2. Associate Reconfigurable Modules (RMs) to the RP
 ###############################################################
-set rp1 "shift_left"
+set rp1 "shift_left_rp"
 set rm_variants($rp1) "shift_left shift_left_slow"
-set rp2 "shift_right"
+set rp2 "shift_right_rp"
 set rm_variants($rp2) "shift_right shift_right_slow"
 
 ########################################################################
